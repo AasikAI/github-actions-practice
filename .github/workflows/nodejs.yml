@@ -1,0 +1,28 @@
+name: node-js
+on: 
+  push:
+    branches: [main, master]
+    paths:
+      - node/**
+  pull_request:
+    branches: [main, master]
+    paths:
+      - node/**
+
+jobs:
+  build-node:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: get the source code
+        uses: actions/checkout@v4
+      
+      - name: install node-js for build
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18 # this actions/setup-node asks for the version of node as an argument that why we are passing the version as the argument using the with keyword
+        
+      - name: dependencies installation 
+        run: npm install
+
+      - name: test it
+        run: npm test

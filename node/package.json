@@ -1,0 +1,11 @@
+{
+  "name": "github-actions-node-test",
+  "version": "1.0.0",
+  "description": "Simple Node.js app for CI testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Aasik",
+  "license": "MIT"
+}

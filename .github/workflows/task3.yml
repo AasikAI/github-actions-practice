@@ -1,0 +1,16 @@
+name: path-filter
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - src/**
+jobs:
+  path-based-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: path-validation
+        run: echo path based push done
+
+
