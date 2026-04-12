@@ -1,8 +1,8 @@
 name: path-filter
 on:
   push:
-    branches: [master]
-    path:
+    branches: [main, master]
+    paths:
       - src/**
 jobs:
   path-based-build:
