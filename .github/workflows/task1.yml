@@ -1,0 +1,16 @@
+# event -> push happens on main branch the workflow will be triggered with checkout and says hello world
+name: task1 
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first checkout the repo
+        uses: actions/checkout@v4
+
+      - name: say hello world
+        run: echo hello world !
+
