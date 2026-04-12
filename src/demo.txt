@@ -1,1 +1,1 @@
-path-based workflow test
+path-based workflow test . .
