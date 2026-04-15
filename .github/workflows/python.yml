@@ -1,0 +1,20 @@
+name: python-ci-pipeline
+on:
+  workflow_dispatch:
+    
+  push:
+    branches: [master]
+
+jobs:
+  python-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup python environment 
+        uses: actions/setup-python@v4
+      - name: print hello world
+        run: print("hello world")
+        shell: python
+      - name: check version of python
+        run: python -version
+
+    
