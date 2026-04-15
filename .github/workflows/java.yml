@@ -1,0 +1,21 @@
+name: java-pipeline
+on:
+  push:
+    branches: [master]
+  
+jobs:
+  java-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: java-runtime-setup
+        uses: actions/java-setup@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: checking java version  
+        run: java version
+
+            
+
