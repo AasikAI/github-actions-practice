@@ -1,5 +1,7 @@
 name: java-pipeline
 on:
+  workflow_dispatch:
+
   push:
     branches: [master]
   
@@ -15,7 +17,7 @@ jobs:
           distribution: temurin
           java-version: 17
       - name: checking java version  
-        run: java version
+        run: java -version
 
             
 
