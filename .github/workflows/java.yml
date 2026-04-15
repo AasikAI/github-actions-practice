@@ -10,7 +10,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: java-runtime-setup
-        uses: actions/java-setup@v4
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
