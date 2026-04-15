@@ -1,0 +1,21 @@
+name: multiple-jobs-sequence
+on: 
+  push:
+    branches: [master]
+    paths:
+      - src/**
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: job-1 
+        run: echo job one is running 
+  job-2:
+    needs: job-1
+    runs-on: ubuntu-latest
+    steps:
+      - name: job-2
+        run: echo job two is running
+
+      
+      
