@@ -2,8 +2,6 @@ name: multiple-jobs-sequence
 on: 
   push:
     branches: [master]
-    paths:
-      - src/demo.txt
 jobs:
   job-1:
     runs-on: ubuntu-latest
